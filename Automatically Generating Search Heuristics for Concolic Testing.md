@@ -54,6 +54,6 @@ path condition : $\Phi$
     1) feature vector로 각 branch를 표현한다. feature인 $\pi_{i}$는 branch에 대한 boolean 서술값이다. $\pi_{i}: Branch $\rightarrow {0,1}$ 예를 들어, 어떤 feature는 해당 branch가 main function에 위치하는지 아닌지를 판단한다. k개의 feature들이 있다 하면, $\pi = {\pi_{1}, \cdots, \pi_{k}}$ 이다. k가 parameter $\theta$의 길이라 하면, branch $\phi$ 는 다음과 같은 boolean vector로 표현된다. $$\pi(\phi) = <\pi_{1}(\phi),\pi_{2}(\phi),\cdots,\pi_{k}(\phi)>$$
     2) branch의 점수를 구한다. parameter $\theta$의 k 차원은 branch feature의 개수와 같다. $$ score_{\theta}(\phi) = \pi(\phi)\cdot\theta $$
     3) 가장 높은 score을 가지고있는 branch를 구한다. 즉, $\Phi_{m}$ 안의 branch $\phi_{1},\cdots,\phi_{n}$ 중에서, 모든 k에 대해 $score_{\theta}(\phi_{j}) \geq score_{\theta}(\phi_{k})$ 인 branch $\phi_{j}$를 선택하는 것이다.     
-       ![ex](./images/Automatically Generating Search Heuristics for Concolic Testing/ex1.png)
-    
+       ![ex](./images/Automatically%20Generating%20Search%20Heuristics%20for%20Concolic%20Testing/ex1.png)
+ 
  * Branch Features : 본 논문에서는 40개의 feature들을 디자인해놓았다. 12개의 static feature들은 프로그램을 실행하지 않고도 얻을 수 있는 property이며 나머지 28개의 dynamic feature들은 프로그램을 실행해서 그 도중에 값을 얻을 수 있는 property이다.
